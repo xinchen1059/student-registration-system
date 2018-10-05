@@ -5,6 +5,7 @@ import java.util.List;
 import com.xinchen.srs.common.Student;
 import com.xinchen.srs.database.DBAccess;
 
+//Business Logic Layer
 public class StudentRegistrationMgr {
     
 	public StudentRegistrationMgr() {

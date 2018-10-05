@@ -12,11 +12,13 @@ import com.xinchen.srs.impl.StudentRegistrationMgr;
 import com.xinchen.srs.common.*;
 import io.jsonwebtoken.*;
 
+//Rest API Layer
 @RestController
 @RequestMapping("/studentRegistrationSystem")
 public class RequestController {
 	private final StudentRegistrationMgr _studentRegMgr = new StudentRegistrationMgr();
 
+	//Read: get student info by id
 	@GetMapping("/student/{id}")
 	ResponseEntity<StudentResource> get(@PathVariable int id) {
         Student student = _studentRegMgr.processGet(id);
@@ -25,13 +27,15 @@ public class RequestController {
 		}
         return new ResponseEntity<StudentResource>(StudentRegistrationUtil.parseStudentRecord(student),HttpStatus.OK);
 	}
-	
+
+	//Read: get all student info
 	@RequestMapping("/getall")
 	ResponseEntity<List<StudentResource>> getall() {
         List<Student> students = _studentRegMgr.processGetAll();
         return new ResponseEntity<List<StudentResource>>(StudentRegistrationUtil.parseAllStudentRecord(students),HttpStatus.OK);
 	}
-	
+
+	//Create: create new student entry with authentication token
 	@PostMapping("/student")
 	ResponseEntity<Integer> post(@RequestBody StudentResource studentResource, @RequestHeader(value="Authorization") String token) {
 		String authId = null;
@@ -52,13 +56,14 @@ public class RequestController {
 		}
 	}
 
-
+    //Delete student info by id
 	@DeleteMapping("/student/{id}")
 	ResponseEntity<Void> delete(@PathVariable int id) {
         _studentRegMgr.processDelete(id);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
-	
+
+	//Update student info by id
 	@PutMapping("/student/{id}")
 	ResponseEntity<Void> put(@PathVariable int id, @RequestBody StudentResource studentResource) {
 		Student student = StudentRegistrationUtil.parseStudentResourceRecord(studentResource);

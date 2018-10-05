@@ -6,8 +6,10 @@ import java.util.*;
 import com.xinchen.srs.common.MajorEnum;
 import com.xinchen.srs.common.Student;
 
+//DB access layer
 public class DBAccess {
-	
+
+	//Query: create new student entry
 	public static int insertStudent(Student student) {
 		Connection connection = DBConnectionUtil.getConnection();
 		PreparedStatement ps = null;
@@ -39,7 +41,8 @@ public class DBAccess {
 		}
 		return id;
 	}
-	
+
+	//Query: update student info
 	public static void updateStudent(Student student) {
 		Connection connection = DBConnectionUtil.getConnection();
 		PreparedStatement ps = null;
@@ -70,6 +73,7 @@ public class DBAccess {
 		}
 	}
 
+    //Query: get all students info
 	public static List<Student> getAllStudents() {
 		
 		Connection connection = DBConnectionUtil.getConnection();
@@ -99,7 +103,8 @@ public class DBAccess {
 		}
 		return students;
 	}
-	
+
+	//Query: remove student
 	public static void removeStudent(int id) {
 		
 		Connection connection = DBConnectionUtil.getConnection();
@@ -118,7 +123,8 @@ public class DBAccess {
 	      DBConnectionUtil.freeConnection(connection);
 	    }
 	}
-	
+
+	//Query: get student info
 	public static Student getStudent(int id) {
 		
 		Connection connection = DBConnectionUtil.getConnection();

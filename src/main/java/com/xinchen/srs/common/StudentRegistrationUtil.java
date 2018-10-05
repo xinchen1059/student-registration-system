@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.xinchen.srs.resource.StudentResource;
 
+//StudentRegistrationUtil to translate between Students and StudentResource
 public class StudentRegistrationUtil {
 	public static String AUTHENTICATION_ID = "123456";
     public static StudentResource parseStudentRecord(Student student) {

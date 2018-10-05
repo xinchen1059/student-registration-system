@@ -4,6 +4,7 @@ import org.springframework.util.StringUtils;
 
 import com.google.common.collect.ImmutableMap;
 
+//Enum class to store major
 public enum MajorEnum {
     UNKNOWN("UNKNOWN"), 
     CS("CS"),

@@ -1,7 +1,6 @@
 package com.xinchen.srs.common;
 
 public class Student {
-	// private static final long serialVersionUID = 1L;
     
 	private int _id = 0;
     private String _firstName = "";
