@@ -63,7 +63,7 @@ public class RequestController {
 	ResponseEntity<Void> put(@PathVariable int id, @RequestBody StudentResource studentResource) {
 		Student student = StudentRegistrationUtil.parseStudentResourceRecord(studentResource);
 		student.setId(id);
-		_studentRegMgr.processPut(id, student);
+		_studentRegMgr.processPut(student);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 }

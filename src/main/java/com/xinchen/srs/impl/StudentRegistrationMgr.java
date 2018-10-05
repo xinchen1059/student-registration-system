@@ -27,7 +27,7 @@ public class StudentRegistrationMgr {
 		DBAccess.removeStudent(id);
 	}
 	
-	public void processPut(int id, Student student) {
-		DBAccess.updateStudent(id, student);
+	public void processPut(Student student) {
+		DBAccess.updateStudent(student);
 	}
 }

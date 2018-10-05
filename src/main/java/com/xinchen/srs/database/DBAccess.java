@@ -40,14 +40,14 @@ public class DBAccess {
 		return id;
 	}
 	
-	public static int updateStudent(int id, Student student) {
+	public static void updateStudent(Student student) {
 		Connection connection = DBConnectionUtil.getConnection();
 		PreparedStatement ps = null;
 	    //int result = 0;
 		
 		String query = "UPDATE students "
-                        + "SET first_name, last_name, email, major, school_year" 
-				        + "VALUES (?, ?, ?, ?, ?)"
+                        + "SET first_name, last_name, email, major, school_year "
+				        + "VALUES (?, ?, ?, ?, ?) "
                         + "WHERE id = ?";
 		try {
 			
@@ -68,7 +68,6 @@ public class DBAccess {
 			DBUtil.closePreparedStatement(ps);
 			DBConnectionUtil.freeConnection(connection);
 		}
-		return id;
 	}
 
 	public static List<Student> getAllStudents() {
