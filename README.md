@@ -18,15 +18,16 @@ The basic functionality is as follows:
 ![Alt text](./system_overview.png)
 
 4. Tools, Technology and Frameworks
-| Category           | Description                                                                    |
-|--------------------|--------------------------------------------------------------------------------|
-| Build Tool         | Maven: Configuration + Dependency                                              |
-| IDE                | Used both Eclipse and Intellij for code development, debugging and deployment  |
-| Authentication     | JWB to generate and verify user tokens used for authenticate the update request|
-| Server Container   | Tomcat servlet container to host the application                               |
-| Database and Access| Used SQLite3 to create local database and JDBC framework to connect to the DB  |
-| API                | Build Restful API CRUD operations using Spring Framework                       |
-| Unit test          | JUnit                                                                          |
+
+| Category             | Description                                                                      |
+| -------------------- | -------------------------------------------------------------------------------- |
+| Build Tool           | Maven: Configuration + Dependency                                                |
+| IDE                  | Used both Eclipse and Intellij for code development, debugging and deployment    |
+| Authentication       | JWB to generate and verify user tokens used for authenticate the update request  |
+| Server Container     | Tomcat servlet container to host the application                                 |
+| Database and Access  | Used SQLite3 to create local database and JDBC framework to connect to the DB    |
+| API                  | Build Restful API CRUD operations using Spring Framework                         |
+| Unit test            | JUnit                                                                            |
 
 5. Database Setup
 
