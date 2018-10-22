@@ -1,7 +1,7 @@
 package com.xinchen.srs.resource;
 
 //studentResource for API request
-public class StudentResource {
+public class StudentEntity {
     private String _firstName;
     private String _lastName;
     private String _email;

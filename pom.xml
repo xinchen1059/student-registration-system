@@ -98,7 +98,7 @@
   </dependencies>
 
   <build>
-    <finalName>student-registration-system-v2</finalName>
+    <finalName>student-registration-system</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- Config: Maven Tomcat Plugin -->

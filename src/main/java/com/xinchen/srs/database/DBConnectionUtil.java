@@ -1,9 +1,6 @@
 package com.xinchen.srs.database;
 
 import java.sql.*;
-import javax.sql.DataSource;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 
 // connect to Sqlite using JDBC
 public class DBConnectionUtil {
